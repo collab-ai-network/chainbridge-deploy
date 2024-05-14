@@ -17,7 +17,8 @@ An input JSON config looks like this:
       "erc721Handler": "0xAf65aEa42847bcb4897d3CF566Cd89248A196B17",
       "genericHandler": "0x30663188630403e7df0288B5Bd18c119A9Ef75ED",
       "gasLimit": "1000000",
-      "maxGasPrice": "20000000",
+      "gasFeeCap": "100000000000",
+			"gasTipCap": "3000000000",
       "startBlock": "0",
       "http": "false",
       "relayers": [
@@ -35,7 +36,8 @@ An input JSON config looks like this:
       "erc721Handler": "0xAf65aEa42847bcb4897d3CF566Cd89248A196B17",
       "genericHandler": "0x30663188630403e7df0288B5Bd18c119A9Ef75ED",
       "gasLimit": "1000000",
-      "maxGasPrice": "20000000",
+      "gasFeeCap": "100000000000",
+			"gasTipCap": "3000000000",
       "startBlock": "0",
       "http": "true",
       "relayers": [

@@ -12,7 +12,8 @@
 				"erc721Handler": "0x3f709398808af36ADBA86ACC617FeB7F5B7B193E",
 				"genericHandler": "0x2B6Ab4b880A45a07d83Cf4d664Df4Ab85705Bc07",
 				"gasLimit": "1000000",
-				"maxGasPrice": "20000000",
+				"gasFeeCap": "100000000000",
+				"gasTipCap": "3000000000",
 				"startBlock": "0",
 				"http": "false"
 			}
@@ -29,7 +30,8 @@
 				"erc721Handler": "0x3f709398808af36ADBA86ACC617FeB7F5B7B193E",
 				"genericHandler": "0x2B6Ab4b880A45a07d83Cf4d664Df4Ab85705Bc07",
 				"gasLimit": "1000000",
-				"maxGasPrice": "20000000",
+				"gasFeeCap": "100000000000",
+				"gasTipCap": "3000000000",
 				"startBlock": "0",
 				"http": "false"
 			}

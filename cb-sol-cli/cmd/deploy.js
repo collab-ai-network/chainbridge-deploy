@@ -90,7 +90,8 @@ const createConfig = (args) => {
     config.erc721Handler = args.erc721HandlerContract;
     config.genericHandler = args.genericHandlerContract;
     config.gasLimit = args.gasLimit.toNumber();
-    config.maxGasPrice = args.gasPrice.toNumber();
+    config.gasFeeCap = args.gasFeeCap.toNumber();
+    config.gasTipCap = args.gasTipCap.toNumber();
     config.startBlock = "0"
     config.http = "false"
     config.relayers = args.relayers;
