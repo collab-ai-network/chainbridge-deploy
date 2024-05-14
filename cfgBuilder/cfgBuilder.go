@@ -42,16 +42,17 @@ type RootConfig struct {
 }
 
 type Opts struct {
-	BridgeAddress  string `json:"bridge,omitempty"`
-	Erc20Handler   string `json:"erc20Handler,omitempty"`
-	Erc721Handler  string `json:"erc721Handler,omitempty"`
-	GenericHandler string `json:"genericHandler,omitempty"`
-	GasLimit       string `json:"gasLimit,omitempty"`
-	GasFeeCap      string `json:"gasFeeCap,omitempty"`
-	GasTipCap      string `json:"gasTipCap,omitempty"`
-	GasMultiplier  string `json:"gasMultiplier,omitempty"`
-	StartBlock     string `json:"startBlock"`
-	Http           string `json:"http,omitempty"`
+	BridgeAddress   string `json:"bridge,omitempty"`
+	Erc20Handler    string `json:"erc20Handler,omitempty"`
+	Erc721Handler   string `json:"erc721Handler,omitempty"`
+	GenericHandler  string `json:"genericHandler,omitempty"`
+	GasLimit        string `json:"gasLimit,omitempty"`
+	GasFeeCap       string `json:"gasFeeCap,omitempty"`
+	GasTipCap       string `json:"gasTipCap,omitempty"`
+	GasMultiplier   string `json:"gasMultiplier,omitempty"`
+	StartBlock      string `json:"startBlock"`
+	UseExtendedCall string `json:"useExtendedCall,omitempty"`
+	Http            string `json:"http,omitempty"`
 }
 
 type EthChainConfig struct {
@@ -72,11 +73,12 @@ type EthChainConfig struct {
 }
 
 type SubChainConfig struct {
-	Name       string   `json:"name"`
-	ChainId    string   `json:"chainId"`
-	Endpoint   string   `json:"endpoint"`
-	StartBlock string   `json:"startBlock"`
-	Relayers   []string `json:"relayers"`
+	Name            string   `json:"name"`
+	ChainId         string   `json:"chainId"`
+	Endpoint        string   `json:"endpoint"`
+	StartBlock      string   `json:"startBlock"`
+	UseExtendedCall string   `json:"useExtendedCall"`
+	Relayers        []string `json:"relayers"`
 }
 
 func (c *RootConfig) ToJSON(file string) *os.File {
@@ -136,7 +138,8 @@ func constructSubChainConfig(cfg SubChainConfig, relayer string) RawChainConfig 
 		Id:       cfg.ChainId,
 		Endpoint: cfg.Endpoint,
 		Opts: Opts{
-			StartBlock: cfg.StartBlock,
+			StartBlock:      cfg.StartBlock,
+			UseExtendedCall: cfg.UseExtendedCall,
 		},
 	}
 }
