@@ -53,6 +53,7 @@ An input JSON config looks like this:
       "chainId":    "3",
       "endpoint":   "http://localhost:8546",
       "startBlock": "11",
+      "useExtendedCall": "true",
       "relayers": [
         "5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY",
         "5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty",
@@ -64,6 +65,8 @@ An input JSON config looks like this:
 ```
 
 This example would result in three configs, one for each relayer, with each containing the three provided chains.
+
+For substrate, useExtendedCall false might lead to execution error if extra extrinsic metadata required
 
 ## Build/Install
 
